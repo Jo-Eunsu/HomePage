@@ -1,0 +1,180 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #006699; /* 파란색으로 변경 */
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.featured-post {
+  display: flex;
+  align-items: center;
+}
+
+.featured-post img {
+  max-width: 50%;
+  margin-right: 2rem;
+}
+
+.post-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.blog-post {
+  /* Blog post card styles go here */
+}
+
+footer {
+  background-color: #006699; /* 파란색으로 변경 */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* 사이드바 스타일 */
+
+.sidebar {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* 우측에 고정 */
+  top: 100px; /* 상단으로 고정 */
+  right: 0; /* 우측으로 고정 */
+  width: 250px; /* 사이드바의 너비 */
+  padding: 1rem;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+/* 이미지 슬라이더 */
+
+.image-slider {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.slide {
+  min-width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent; /* 이미지가 로드되면 텍스트를 숨김 */
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.slide::before {
+  content: ''; /* 가상 요소를 사용하여 배경 이미지를 적용 */
+  background-image: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide::before {
+  background-image: inherit;
+  -webkit-mask: url('images/mask.png'); /* 이 부분은 선택적 */
+  mask: url('images/mask.png');         /* 이 부분은 선택적 */
+}
+
+.slide img {
+  display: none; /* 이미지가 로드되면 텍스트를 덮음 */
+}
+
+.slide img:valid {
+  display: block; /* 이미지가 유효하면 텍스트를 덮음 */
+}
+
+/* 블로그 포스트 */
+.new-post {
+  margin: 2rem 0;
+}
+
+#post-content {
+  width: 100%;
+  height: 100px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+}
+
+.blog-post {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin: 1rem 0;
+}
